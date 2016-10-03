@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+/// <summary>
+/// Нахождение факториала (3 способа: рекурсивный и 2 нерекурсивных).
+/// </summary>
 namespace Factorial
 {
     internal class Program
@@ -12,8 +10,8 @@ namespace Factorial
 
         {
             Console.Write("Enter n: ");
-            int c = int.Parse(Console.ReadLine());
-            Console.WriteLine("Factorial n! = {0}", fact(c));
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Factorial n! = {0}", fact(n));
             Console.ReadKey();
         }
 
@@ -22,13 +20,17 @@ namespace Factorial
             return (n == 0) ? 1 : n * fact(n - 1);
         }
 
-        //public static int fact(int a)
+        //public static int fact(int n)
         //{
         //    int c = 1;
-        //    for (int i = 1; i <= a; i++)
-        //    {
-        //        c = c * i;
-        //    }
+        //    for (int i = 1; i <= n; c *= i++){}
+        //    return c;
+        //}
+
+        //public static int fact(int n)
+        //{
+        //    int c = 1;
+        //    for (; n > 0; c *= n--){}
         //    return c;
         //}
     }
